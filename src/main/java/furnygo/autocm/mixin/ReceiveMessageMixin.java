@@ -19,32 +19,107 @@ public class ReceiveMessageMixin {
         if (text.getString().startsWith("  Ответь на вопрос:")) {
             if (((ConfigBoolean) AutoCMConfig.OPTIONS.get(0)).getBooleanValue()) {
                 if (text.getString().contains("Как называется губка из Губки Боба?")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Боб");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Боб");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Кто создатель сервера?")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Santa");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Santa");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Кто президент России?")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Путин");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Путин");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Назовите столицу России")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Москва");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Москва");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Назовите столицу Украiны")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Киев");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Киев");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Назовите год выхода MINECRAFT")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("2011");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("2011");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("В каком году был основан CheatMine")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("2016");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("2016");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Назовите фамилию Пушкина")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Пушкин");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Пушкин");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Кто создал таблицу Менделеева")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Менделеев");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Менделеев");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Как называется корабль из Титаника?")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Титаник");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Титаник");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 } else if (text.getString().contains("Как называется остров в мультфильме Мадагаскар?")) {
-                    MinecraftClient.getInstance().player.sendChatMessage("Мадагаскар");
+                    (new Thread(() -> {
+                        try {
+                            Thread.sleep(delay);
+                            MinecraftClient.getInstance().player.sendChatMessage("Мадагаскар");
+                        } catch (Exception var4) {
+                            var4.printStackTrace();
+                        }
+                    })).start();
                 }
             }
-        }
-
-        else if (text.getString().startsWith("  Решите пример:")) {
+        } else if (text.getString().startsWith("  Решите пример:")) {
             String msg = text.getString();
             if (((ConfigBoolean) AutoCMConfig.OPTIONS.get(1)).getBooleanValue()) {
                 // plus
