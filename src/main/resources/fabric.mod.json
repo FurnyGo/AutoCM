@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "autocm",
+  "version": "1.0",
+
+  "name": "AutoCM",
+  "description": "§lAutoAnswers for CheatMine",
+  "authors": [
+    "FurnyGo"
+  ],
+  "contact": {
+    "homepage": "https://youtube.com/FurnyGo",
+    "sources": "https://github.com/FurnyGo/AutoChatMod"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/autocm/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "furnygo.autocm.AutoCMMod"
+    ],
+    "modmenu": [
+      "furnygo.autocm.ModMenuApiImpl"
+    ]
+  },
+  "mixins": [
+    "autocm.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.18.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

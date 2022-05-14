@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "furnygo.autocm.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "ReceiveMessageMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

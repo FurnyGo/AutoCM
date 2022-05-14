@@ -1,0 +1,11 @@
+furnygo/autocm/mixin/ReceiveMessageMixin.java
+ furnygo.autocm.mixin.ReceiveMessageMixin
+furnygo/autocm/AutoCMConfig.java
+ furnygo.autocm.AutoCMConfig
+ furnygo.autocm.AutoCMConfig$Value
+furnygo/autocm/AutoCMMod.java
+ furnygo.autocm.AutoCMMod
+furnygo/autocm/ModMenuApiImpl.java
+ furnygo.autocm.ModMenuApiImpl
+furnygo/autocm/ConfigGui.java
+ furnygo.autocm.ConfigGui
