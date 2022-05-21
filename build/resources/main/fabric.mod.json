@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "autocm",
-  "version": "1.0",
+  "version": "1.1",
 
   "name": "AutoCM",
-  "description": "§lAutoAnswers for CheatMine",
+  "description": "§lЧатбот для чат-игры сервера CheatMine",
   "authors": [
     "FurnyGo"
   ],

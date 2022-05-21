@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ConfigGui extends GuiConfigsBase {
     public ConfigGui() {
-        super(10, 50, "autocm", null, "AutoCM config");
+        super(10, 50, "autocm", null, "Конфигурация AutoCM");
     }
 
     @Override

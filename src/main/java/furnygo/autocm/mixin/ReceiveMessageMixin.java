@@ -16,13 +16,16 @@ public class ReceiveMessageMixin {
     @Inject(method = "addMessage(Lnet/minecraft/text/Text;I)V", at = @At("HEAD"))
     public void addMessage(Text text, int messageId, CallbackInfo info) {
         int delay = Integer.parseInt(((ConfigString) AutoCMConfig.OPTIONS.get(2)).getStringValue());
+        String prefix = ((ConfigString) AutoCMConfig.OPTIONS.get(3)).getStringValue();
+        String suffix = ((ConfigString) AutoCMConfig.OPTIONS.get(4)).getStringValue();
+
         if (text.getString().startsWith("  Ответь на вопрос:")) {
             if (((ConfigBoolean) AutoCMConfig.OPTIONS.get(0)).getBooleanValue()) {
                 if (text.getString().contains("Как называется губка из Губки Боба?")) {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Боб");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Боб"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -31,7 +34,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Santa");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Santa"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -40,7 +43,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Путин");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Путин"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -49,7 +52,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Москва");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Москва"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -58,7 +61,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Киев");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Киев"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -67,7 +70,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("2011");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"2011"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -76,7 +79,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("2016");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"2016"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -85,7 +88,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Пушкин");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Пушкин"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -94,7 +97,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Менделеев");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Менделеев"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -103,7 +106,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Титаник");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Титаник"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -112,7 +115,7 @@ public class ReceiveMessageMixin {
                     (new Thread(() -> {
                         try {
                             Thread.sleep(delay);
-                            MinecraftClient.getInstance().player.sendChatMessage("Мадагаскар");
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+"Мадагаскар"+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -139,7 +142,7 @@ public class ReceiveMessageMixin {
 
                             int result = firstNum + secondNum;
 
-                            MinecraftClient.getInstance().player.sendChatMessage("" + result);
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+result+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -164,7 +167,7 @@ public class ReceiveMessageMixin {
 
                             int result = firstNum - secondNum;
 
-                            MinecraftClient.getInstance().player.sendChatMessage("" + result);
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+result+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -189,7 +192,7 @@ public class ReceiveMessageMixin {
 
                             int result = firstNum * secondNum;
 
-                            MinecraftClient.getInstance().player.sendChatMessage("" + result);
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+result+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }
@@ -214,7 +217,7 @@ public class ReceiveMessageMixin {
 
                             int result = firstNum / secondNum;
 
-                            MinecraftClient.getInstance().player.sendChatMessage("" + result);
+                            MinecraftClient.getInstance().player.sendChatMessage(prefix+result+suffix);
                         } catch (Exception var4) {
                             var4.printStackTrace();
                         }

@@ -18,9 +18,11 @@ public class AutoCMConfig implements IConfigHandler {
 
     private static ImmutableList<IConfigBase> getConfig() {
         return ImmutableList.of(
-                new ConfigBoolean("voprosi", Value.VOPROSI.getAsBoolean(), "voprosi"),
-                new ConfigBoolean("primeri", Value.PRIMERI.getAsBoolean(), "primeri"),
-                new ConfigString("delayMillisekundi", Value.DELAY.getAsString(), "delay answer")
+                new ConfigBoolean("Вопросы", Value.VOPROSI.getAsBoolean(), "Включение ответов на вопросы"),
+                new ConfigBoolean("Примеры", Value.PRIMERI.getAsBoolean(), "Включение ответов на примеры"),
+                new ConfigString("Задержка в миллисекундах", Value.DELAY.getAsString(), "Задержка между вопросом и ответом"),
+                new ConfigString("Префикс", Value.PREFIX.getAsString(), "Префикс перед ответом"),
+                new ConfigString("Суффикс", Value.SUFFIX.getAsString(), "Суффикс после ответа")
         );
     }
 
@@ -60,7 +62,9 @@ public class AutoCMConfig implements IConfigHandler {
     public enum Value {
         VOPROSI("true"),
         PRIMERI("true"),
-        DELAY("0");
+        DELAY("0"),
+        PREFIX("! "),
+        SUFFIX(" [AutoCM]");
 
 
         private final String value;
