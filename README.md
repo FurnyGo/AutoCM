@@ -1,4 +1,4 @@
-# AutoCheatMine
+# AutoCheatMine (AutoCM)
 Мод, который может автоматически отвечать на ЧАТ-ИГРУ сервера **CheatMine** (**Fabric 1.18.2**)  
   
 Для работы мода нужен [**MaliLib**](https://www.curseforge.com/minecraft/mc-mods/malilib) и [**Fabric API**](https://www.curseforge.com/minecraft/mc-mods/fabric-api), а для его настройки [**ModMenu**](https://www.curseforge.com/minecraft/mc-mods/modmenu)  
