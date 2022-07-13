@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "autocm",
-  "version": "1.1",
+  "version": "1.2",
 
   "name": "AutoCM",
   "description": "§lЧатбот для чат-игры сервера CheatMine",
@@ -32,7 +32,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.18.x"
+    "minecraft": ["1.18.x", "1.19.x"]
   },
   "suggests": {
     "flamingo": "*"

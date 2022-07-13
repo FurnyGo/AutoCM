@@ -22,7 +22,8 @@ public class AutoCMConfig implements IConfigHandler {
                 new ConfigBoolean("Примеры", Value.PRIMERI.getAsBoolean(), "Включение ответов на примеры"),
                 new ConfigString("Задержка в миллисекундах", Value.DELAY.getAsString(), "Задержка между вопросом и ответом"),
                 new ConfigString("Префикс", Value.PREFIX.getAsString(), "Префикс перед ответом"),
-                new ConfigString("Суффикс", Value.SUFFIX.getAsString(), "Суффикс после ответа")
+                new ConfigString("Суффикс", Value.SUFFIX.getAsString(), "Суффикс после ответом"),
+                new ConfigBoolean("Лотерея", Value.LOTTERY.getAsBoolean(), "Авто ставка на лотерею")
         );
     }
 
@@ -64,7 +65,8 @@ public class AutoCMConfig implements IConfigHandler {
         PRIMERI("true"),
         DELAY("0"),
         PREFIX("! "),
-        SUFFIX(" [AutoCM]");
+        SUFFIX(" [AutoCM]"),
+        LOTTERY("false");
 
 
         private final String value;
